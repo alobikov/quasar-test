@@ -54,6 +54,7 @@ body {
 
 h3 {
     color: white;
+    font-size: 2rem;
 }
 
 .row {
@@ -77,8 +78,6 @@ h3 {
     height: 250px;
     width: 250px;
     flex-basis: 20%;
-    -ms-flex: auto;
-    position: relative;
     box-sizing: border-box;
     padding: 8px 8px 40px 8px;
     :hover {
