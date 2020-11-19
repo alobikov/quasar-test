@@ -13,17 +13,17 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     data() {
         return {
-            stores: [
-            {id: "1233", name: "Store1", details:"lorem ipsume dolores est un"},
-            {id: "1234", name: "General Production Station", details:"lorem ipsume dolores est un"},
-            {id: "1235", name: "Store2", details:"lorem ipsume dolores est un"},
-            {id: "1236", name: "General Production Station", details:"lorem ipsume dolores est un"},
-            {id: "1237", name: "Store3", details:"lorem ipsume dolores est un"}
-            ]
+            stores: []
         }
+    },
+    mounted() {
+        axios("https://demoapi.thedenstore.com/api/service?Request=Stores&Language=en-us")
+        .then(response=> this.stores = response.data)
+        .catch(error => {throw new Error("Fetching from server failed", error)})
     },
     methods:{
     showDetails(store) {
@@ -46,7 +46,6 @@ export default {
     }
 }
 </script>
-
 
 <style lang="scss">
 body {
