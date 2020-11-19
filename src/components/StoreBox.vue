@@ -1,16 +1,17 @@
 <template>
-<div style="padding:8px;">
-    <div class='row'>
-        <div
-            clickable
-            v-for="store in stores"
-            :key="store.id"
-            @click="showDetails(store)"
-            class='grid-item'><div class="grid-item-container"><h3>{{store.name}}</h3></div>
+    <div style="padding:8px;">
+        <div class='row'>
+            <div
+                clickable
+                v-for="store in stores"
+                :key="store.id"
+                @click="showDetails(store)"
+                class='grid-item'><div class="grid-item-container"><h3>{{store.name}}</h3></div>
+            </div>
         </div>
     </div>
-</div>
 </template>
+
 <script>
 export default {
     data() {
@@ -47,7 +48,7 @@ export default {
 </script>
 
 
-<style lang="stylus">
+<style lang="scss">
 body {
     background-color: black;
 }
